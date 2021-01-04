@@ -8,26 +8,10 @@ Apple doesn't allow game emulators to be uploaded to the app store. This makes i
 
 This emulator "mocks" the Game Boy Advance hardware using javascript to allow the user to play all of their games in a browser window. 
 
-
-## Get Started
-
-Clone GamePlayAdvance from github:
-```git clone https://trentonmercer/GamePlayAdvance```
-
-Install dependencies using `yarn`:
-```yarn install```
-Or ```npm```:
-
-1. ```git clone https://trentonmercer/GamePlayAdvance```
-2. ```cd GamePlayAdvance && yarn install```
-3. ```yarn start``` 
-
-
 ## Getting Started
 
 ```bash
-git clone https://trentonmercer/GamePlayAdvance
-cd GamePlayAdvance
+git clone https://github.com/trentonmercer/GamePlayAdvance && cd GamePlayAdvance
 ```
 Using yarn [`yarn`](https://yarnpkg.com/en/package/jest):
 
