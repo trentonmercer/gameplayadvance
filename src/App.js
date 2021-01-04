@@ -6,8 +6,9 @@ import {
 } from "react-router-dom";
 
 import Game from  "./screens/Game"
+import Library from "./screens/Library"
 
-function App() {
+const App = () => {
   return (
     <Router>
     <Switch>
@@ -15,7 +16,7 @@ function App() {
       <Game />
     </Route>
     <Route path="/">
-      <Game />
+      <Library />
     </Route>
   </Switch>
 </Router>
