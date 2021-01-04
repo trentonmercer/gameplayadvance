@@ -16,15 +16,13 @@ git clone https://github.com/trentonmercer/GamePlayAdvance && cd GamePlayAdvance
 Using yarn [`yarn`](https://yarnpkg.com/en/package/jest):
 
 ```bash
-yarn install
-yarn start
+yarn install && yarn start
 ```
 
 Or [`npm`](https://www.npmjs.com/package/jest):
 
 ```bash
-npm install
-npm start
+npm install && npm start
 ```
 
 Note: Documentation uses `yarn` commands, but `npm` will also work. You can compare `yarn` and `npm` commands in the [yarn docs, here](https://yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison).
