@@ -1,0 +1,107 @@
+@media only screen and (min-width: 812px) and (max-width: 879px) {
+
+    .top-icons {
+        position: relative;
+        top: 0;
+        font-size: 20px !important;
+    }
+
+    #screen {
+
+        background-color: #000;
+        width: 343px !important;
+        max-width: 343px !important;
+        height: 300px !important;
+        position: relative;
+        
+    }
+
+    #screen-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #gameboy {
+        height: 90%;
+    }
+    #main {
+        max-height: 300px !important;
+        width: 50% !important;
+        height: 350px !important;
+    }
+
+    #settings-menu {
+        position: relative;
+        top: 12% !important;
+        line-height: .75;
+        padding: 5px 0;
+    }
+
+    .controls {
+        position: absolute;
+        top: -200px;
+    }
+
+    #controls-row {
+        width: 850px;
+    }
+
+    #d-pad {
+        position: absolute;
+        left: 10px;
+    }
+
+    #selection-buttons {
+        position: relative;
+        left: -100px;
+    }
+
+    .well {
+        position: relative;
+        top: 11px;
+    }
+
+    
+    .l_button {
+        top: -320px;
+        left: -180px;
+    }
+
+    .r_button {
+        top: -320px;
+        left: 180px;
+    }
+
+    .selectstart {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        top: 25x;
+        left: 40px;
+        width: 250px;
+        
+    }
+
+    #select-wrapper {
+        display: flex;
+        flex-direction: row;
+        left: -5px;
+        padding-bottom: 3px;
+    }
+
+    #start-wrapper {
+        display: flex;
+        flex-direction: row;
+        left: 65px;
+    }
+
+    #start-label {
+        padding: 0 3px 0 0;
+    }
+    
+    #select-label {
+        padding: 0 3px 0 0;
+    }
+
+}

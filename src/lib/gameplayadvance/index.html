@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html manifest="resources/manifest.webmanifest">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="resources/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="css/menu.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gba.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="apple-touch-icon-precomposed" href="images/icon-large.png">
+	<link rel="stylesheet" href="css/devices/iphone-xr.css">
+	<link rel="stylesheet" href="css/devices/iphone-x.css">
+	<link rel="stylesheet" href="css/devices/iphone-8plus.css">
+	<link rel="stylesheet" href="css/devices/iphone-8.css">
+
+	<link rel="stylesheet" href="css/devices/iphone-xr-landscape.css">
+	<link rel="stylesheet" href="css/devices/iphone-x-landscape.css">
+	<link rel="stylesheet" href="css/devices/iphone-8plus-landscape.css">
+	<link rel="stylesheet" href="css/devices/iphone-8-landscape.css">
+
+    <title>Game Play</title>
+</head>
+<body>
+
+<div id="unclickable"></div>
+<div id="librarynav" class="sidenav">
+
+		<a href="javascript:void(0)" class="closebtn unselectable" onclick="closeNav()"><i class="fa fa-arrow-right"></i></a>
+		
+		<div style="margin: 80px">
+			<h3>Games</h3>
+
+			<hr>
+		<span style="font-size: 18px; color: rgb(40, 94, 219)" id="select" onclick="document.getElementById('loader').click()">Load a .gba ROM</span>
+			<button onclick="gba.downloadSavedata()" hidden style="display: none;"  disabled>Download Savegame</button>
+			<button onclick="document.getElementById('saveloader').click()" hidden style="display: none;" disabled>Upload Savegame</button>
+		</div>
+</div> 
+
+
+
+
+<div id="content">
+<div class="top-menu">
+	<div style="margin-right: auto; margin-left: 0;">
+		<h4 class="top-icons" style="cursor: pointer;" onclick="openNav();"><i class="fa fa-arrow-left"></i>&nbsp;Library</h4>
+	</div>
+	<div style="margin-left: auto; margin-right: 0;">
+		<h4 class="top-icons" id="button-library" style="cursor: pointer;" onclick="settingsToggle();"><i class="fa fa-gear"></i></h4>
+	</div>
+</div>
+
+
+    <div id="gameboy" class="purple" style="width:100%; position: fixed; bottom: 0;" class="container">
+		<!-- Start -->
+		<div class="panel panel-default">
+		  <div class="panel-body">
+			
+
+      <div id="screen-wrapper">
+		<div id="main" style="min-width:343px;width:100%;" height="300"> 
+			<div style="display: flex; justify-content: center;">
+				<canvas style="max-width:343px;width:100%;margin-top:0px;" id="screen" width="343px" height="300"></canvas>
+			</div>
+		</div>
+		</div>
+
+	
+				<div style="position:relative;" class="well cont">
+				 <div class="" style="display: flex; justify-content: center;">
+				  <button id="button_9" style="margin: 0 100px 0 0;" class="l_button" >L</button>
+				  <button id="button_8" class="r_button">R</button>
+				 </div>
+				  <div class="controls" style="max-width: 350px;">
+				   <div class="row" id="controls-row">
+					<div style="margin:24px 0 0 -2px;" class="col-xs-6 text-center">
+						<section id="d-pad">
+			 <div id="button_6"  class="btn btn-default btn-direction up gbabuttons">^</div>
+			 <br/>
+			 <div class="btn-group">
+			   <div id="button_5" class="btn btn-default btn-direction left gbabuttons"><</div>
+			   <div style="border:none !important;padding: 6px 12px !important;" class="btn btn-default center">
+				 <i style="opacity:0.1;" class="fa fa-circle fa-2x"></i>
+			   </div>
+			   <div id="button_4" class="btn btn-default btn-direction right gbabuttons">></div>
+			 </div>
+			 <br/>
+			 <div id="button_7" class="btn btn-default btn-direction down gbabuttons">v</i></div>
+		   </div>
+		</section>
+		<section id="selection-buttons">
+		   <div style="margin-top:35px;" class="col-xs-6 text-right">
+			   <div id="button_0" type="button" class="abutton btn btn-lg btn-default btn-circle pull-right gbabuttons">A</div><br/>
+			   <div id="button_1" style="margin:20px 10px 0 0;" type="button" class="bbutton btn btn-lg btn-default btn-circle pull-right gbabuttons">B</div>
+			</div>
+		</section>
+		</div>
+		<div class="clearfix"></div>
+		<div class="row selectstart">
+		  <div style="padding-left:30%;" class="col-xs-6 text-center" id="select-wrapper">
+			<small style="margin-bottom: 4px;" id="select-label" >SELECT</small><br/>
+			<span class="select"><div class="selectbtn" id="button_2"></div></span>
+		  </div>
+
+		  <div style="padding-right:20%;" class="col-xs-6 text-center" id="start-wrapper">
+			<small style="margin-bottom: 4px;" id="start-label">START</small><br/>
+			<span class="start"><div id="button_3" class="startbtn"></div></span>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+</div>
+
+		
+
+
+<!-- sound menu -->
+<div id="screen-sound-menu" class="menu menu-short ">
+	<ul>
+	  <li id="sound-enable" style="display: block;" onclick="$('#unclickable').attr({disabled:'disabled', hidden:'hidden'});" class="hide-menu hide-transition">Enable Sound</li>
+	</ul>
+	<ul>
+	  <li id="sound-cancel" style="display: block;" onclick="$('#unclickable').attr({disabled:'disabled', hidden:'hidden'});"  class="hide-menu hide-transition">Cancel</li>
+	</ul>
+  </div>
+<!-- Settings -->
+<div class="modal" aria-hidden="true">
+	<div class="modal-dialog" id="settings-menu">
+	  <div class="modal-header">
+		<h3>Settings</h3>
+		<hr>
+	  </div>
+	  <div class="modal-body">
+		<div>Version 1.4</div>
+		<hr>
+		<div class="color-selection">
+           <span style="font-size: 18px; font-style: bold;">Color</span>
+		   <li id="purple" class="colorblock" style="background-color:#524386;"></li>
+		   <li id="red" class="colorblock" style="background-color:#f3001b;"></li>
+		   <li id="yellow" class="colorblock" style="background-color:#ffb70d;"></li>
+		   <li id="green" class="colorblock" style="background-color:#81c907;"></li>
+		</div>
+		<hr>
+		<span style="font-size: 18px; color: rgb(40, 94, 219)" id="pause"  onclick="togglePause()">Pause</span>
+	
+		<span style="font-size: 18px; color: rgb(40, 94, 219)" onclick="reset()" disable hidden>Reset Game</span><hr>
+		<a style="font-size: 18px; color: rgb(40, 94, 219)" id="select" target="_blank" href="https://github.com/blastoffsites/gameplayadvance/issues">Report a Bug</a>
+		<hr>
+	  <div class="modal-footer">
+		<span style="font-size: 18px; color: rgb(40, 94, 219)" onclick="settingsToggle()"><b>Done</b></span>
+	
+	  </div>
+	</div>
+  </div>
+<!-- DEPRECATED -->
+		<!-- Settings --><!--
+		<button class="bigbutton" id="select" onclick="document.getElementById('loader').click()">Load a .gba ROM</button>-->
+		<input id="loader" type="file" accept=".gba" onchange="run(this.files[0])"  style="display: none;"hidden>
+		<input id="romsave" type="file" accept=".gba" onchange="saveRom(this.files[0]);"  style="display: none;"hidden>
+		<input id="saveloader" type="file" onchange="uploadSavedataPending(this.files[0]);" style="display: none;" hidden>
+	<!--	<button onclick="document.getElementById('saveloader').click()" disabled hidden>Upload Savegame</button> 
+    <input id="saveloader" type="file" onchange="uploadSavedataPending(this.files[0]);" disabled hidden> -->
+		<!-- A lot of buttons / inputs are disabled because they need further testing... -->
+	<!---->	
+	<!--	<button class="bigbutton" onclick="reset()">RESET</button> -->
+	<!--	<button onclick="gba.downloadSavedata()" disabled hidden>Download Savegame</button><br> -->
+<!--		<label id="pixelated">
+			<input type="checkbox" onchange="setPixelated(this.checked)" disabled hidden>
+		</label> -->
+	<!--	<div id="sound">
+			<input type="checkbox" checked onchange="gba.audio.masterEnable = this.unchecked" disabled hidden>
+			<input type="range" min="0" max="1" value="1" step="any" onchange="setVolume(this.value)" oninput="setVolume(this.value)" disabled hidden>
+		</div> -->
+	<!--	<button onclick="screenshot()" disabled hidden>Screenshot</button> -->
+
+
+<!-- INCLUDES -->
+    <script src="settings.js"></script>
+	<script src="core/util.js"></script>
+	<script src="core/core.js"></script>
+	<script src="core/arm.js"></script>
+	<script src="core/thumb.js"></script>
+	<script src="core/mmu.js"></script>
+	<script src="core/io.js"></script>
+	<script src="core/audio.js"></script>
+	<script src="core/video.js"></script>
+	<script src="core/video/proxy.js"></script>
+	<script src="core/video/software.js"></script>
+	<script src="core/irq.js"></script>
+	<script src="core/keypad.js"></script>
+	<script src="core/sio.js"></script>
+	<script src="core/savedata.js"></script>
+	<script src="core/gpio.js"></script>
+	<script src="core/gba.js"></script>
+	<script src="resources/xhr.js"></script>
+	<script src="main.js"></script>
+  </body>
+</html>

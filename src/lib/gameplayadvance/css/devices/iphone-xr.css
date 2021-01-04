@@ -1,0 +1,46 @@
+@media only screen and (min-height: 880px) {
+
+    .top-icons {
+        position: relative;
+        top: 20px;
+        font-size: 24px !important;
+    }
+
+    #screen {
+        margin-top: 25px !important;
+        background-color: #000;
+        width: 343px !important;
+        max-width: 343px !important;
+        height: 300px !important;
+    }
+
+    #gameboy {
+        height: 90%;
+    }
+    #main {
+        max-height: 400px !important;
+        width: 100% !important;
+        height: 350px !important;
+    }
+
+    .panel-default {
+        height: 100%;
+    }
+
+    .panel-body {
+        height: 100%;
+    }
+
+    .well {
+        padding-top: 165px;
+        height: 55%;
+    }
+    
+    .l_button {
+        left: -75px;
+    }
+
+    .r_button {
+        right: -75px;
+    }
+}
