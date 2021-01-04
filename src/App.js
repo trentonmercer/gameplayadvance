@@ -1,14 +1,24 @@
-import Game from  "./screens/Game"
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-// Todo: Setup react router in App.js
+import Game from  "./screens/Game"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Game />
-      </header>
-    </div>
+    <Router>
+    <Switch>
+    <Route path="/game">
+      <Game />
+    </Route>
+    <Route path="/">
+      <Game />
+    </Route>
+  </Switch>
+</Router>
   );
 }
 
