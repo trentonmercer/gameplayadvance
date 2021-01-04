@@ -1,12 +1,12 @@
-# GamePlayAdvance
-Javascript-based gameboy advance emulator to play GBA ROMs in your browser
+## Web Based GBA Emulator
+Game Boy Advance [emulator](https://en.wikipedia.org/wiki/Emulator) to play .gba ROM files right in the browser
 
 ## Purpose
-GamePlayAdvance makes playing your .gba game files easy, because there's no app to download - it's all web based.  
-
-This [emulator](https://en.wikipedia.org/wiki/Emulator) "mocks" the Game Boy Advance hardware using javascript to allow the user to load and play .gba ROM files.
+GamePlayAdvance makes playing your Game Boy Advance ROMs easy, because there's no app to download - it's all web based.  
  
 Apple doesn't allow game emulators to be uploaded to the app store. This makes it especially difficult to play ROMs on mobile devices using solutions that rely on interfacing directly with the operating system, like downloading an app. 
+
+This emulator "mocks" the Game Boy Advance hardware using javascript to allow the user to play all of their games in a browser window. 
 
 ## Available Scripts
 
