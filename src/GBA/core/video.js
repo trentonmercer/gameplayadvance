@@ -1,4 +1,4 @@
-function GameBoyAdvanceVideo() {
+export function GameBoyAdvanceVideo() {
 	this.renderPath = new GameBoyAdvanceSoftwareRenderer();
 
 	this.CYCLES_PER_PIXEL = 4;
@@ -178,3 +178,5 @@ GameBoyAdvanceVideo.prototype.finishDraw = function(pixelData) {
 	this.context.putImageData(pixelData, 0, 0);
 	this.drawCallback();
 };
+
+export default GameBoyAdvanceVideo;

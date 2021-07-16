@@ -1,28 +1,30 @@
-## Web Based GBA Emulator
-Game Boy Advance [emulator](https://en.wikipedia.org/wiki/Emulator) to play .gba ROM files right in the browser
 
-## Purpose
-GamePlayAdvance makes playing your Game Boy Advance ROMs easy, because there's no app to download - it's all web based.  
- 
-Apple doesn't allow game emulators to be uploaded to the app store. This makes it especially difficult to play ROMs on mobile devices using solutions that rely on interfacing directly with the operating system, like downloading an app. 
 
-This emulator "mocks" the Game Boy Advance hardware using javascript to allow the user to play all of their games in a browser window. 
+This project is a forked from [gba.js](https://github.com/endrift/gbajs). 
+
+GamePlayAdvance is a completely javascript-based game emulator for all gameboyadvance supported files.
+
+## Why web based?
+
+Historically, it has been a daunting process to use game emulators on mobile devices. Emulators are prohibited from being published as apps by some companies, so an app download in the traditional sense is not possible. 
+
+This forces us to look to the web - specifically, PWAs!
+
+## What's a PWA?
+
+Progressive Web Applications are the perfect compromise here. A PWA is a webpage that creates an app-like experience for mobile users. The great thing about a PWA is it's compatible with any device that has an internet connection. (Its only a website after all... if it can connect to it, it can run it!)
+
+## Disclaimer
+
+Do not emulate ROMs if you have not purchased them.  
 
 ## Getting Started
 
-```bash
-git clone https://github.com/trentonmercer/GamePlayAdvance && cd GamePlayAdvance
-```
-Using yarn [`yarn`](https://yarnpkg.com/en/package/jest):
+This project currently has several errors on runtime, this is a work in progress
 
 ```bash
-yarn install && yarn start
+git clone https://github.com/trentonmercer/gameplayadvance
 ```
-
-Or [`npm`](https://www.npmjs.com/package/jest):
-
 ```bash
-npm install && npm start
+cd gameplayadvance && yarn install && yarn start
 ```
-
-Note: Documentation uses `yarn` commands, but `npm` will also work. You can compare `yarn` and `npm` commands in the [yarn docs, here](https://yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison).

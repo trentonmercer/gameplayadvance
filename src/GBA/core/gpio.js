@@ -1,4 +1,4 @@
-function GameBoyAdvanceGPIO(core, rom) {
+export function GameBoyAdvanceGPIO(core, rom) {
 	this.core = core;
 	this.rom = rom;
 
@@ -215,3 +215,5 @@ GameBoyAdvanceRTC.prototype.bcd = function(binary) {
 	counter += (binary % 10) << 4;
 	return counter;
 };
+
+export default GameBoyAdvanceGPIO

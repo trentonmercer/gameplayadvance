@@ -1,0 +1,12 @@
+
+# Directory breakdown
+
+index.js	- application root, routes are rendered at this level
+
+GBA.js 		- Primary component for all GBA emulator logic and views
+
+GBA  		- Contains emulator core files and the react implementation for the GBA.js emulator 
+
+routes 		- Routing controls for react-router-dom 
+
+screens		- Various screens that may be used by a route 

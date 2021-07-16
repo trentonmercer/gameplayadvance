@@ -18,7 +18,7 @@ function hex(number, leading, usePrefix) {
 	return (usePrefix ? '0x' : '') + new Array(leading + 1).join('0') + string;
 }
 
-Serializer = {
+export const Serializer = {
 	TAG_INT: 1,
 	TAG_STRING: 2,
 	TAG_STRUCT: 3,

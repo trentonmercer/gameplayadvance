@@ -1,0 +1,10 @@
+
+# Directory breakdown
+
+components  	- React components specifically relating to a gameboyadvance. 
+core		- Core emulator files from the GBA.js github repository. 
+legacy  	- Example files from the prevous jQuery implementation
+
+
+
+

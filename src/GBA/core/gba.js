@@ -1,4 +1,13 @@
-function GameBoyAdvance(audio_option) {
+import ARMCore from './core';
+import GameBoyAdvanceMMU from './mmu';
+import GameBoyAdvanceInterruptHandler from './irq';
+import GameBoyAdvanceIO from './io';
+import GameBoyAdvanceAudio from './audio';
+import GameBoyAdvanceVideo from './video';
+import GameBoyAdvanceKeypad from './keypad';
+import GameBoyAdvanceSIO from './sio';
+
+export function GameBoyAdvance(audio_option) {
 
 	this.LOG_ERROR = 1;
 	this.LOG_WARN = 2;
@@ -422,3 +431,6 @@ GameBoyAdvance.prototype.ASSERT = function(test, err) {
 		throw new Error("Assertion failed: " + err);
 	}
 };
+
+
+export default GameBoyAdvance

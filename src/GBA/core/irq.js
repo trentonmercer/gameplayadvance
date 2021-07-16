@@ -1,4 +1,4 @@
-function GameBoyAdvanceInterruptHandler() {
+export function GameBoyAdvanceInterruptHandler() {
 	this.inherit();
 	this.FREQUENCY = 0x1000000;
 
@@ -982,3 +982,5 @@ GameBoyAdvanceInterruptHandler.prototype.rl = function(source, dest, unitsize) {
 		this.cpu.mmu.store8(dPointer++, 0);
 	}
 };
+
+export default GameBoyAdvanceInterruptHandler;

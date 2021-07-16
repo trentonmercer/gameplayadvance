@@ -1,4 +1,4 @@
-function GameBoyAdvanceKeypad() {
+export function GameBoyAdvanceKeypad() {
 	this.KEYCODE_LEFT = 37;
 	this.KEYCODE_UP = 38;
 	this.KEYCODE_RIGHT = 39;
@@ -209,6 +209,7 @@ GameBoyAdvanceKeypad.prototype.handler = function(event) {
 
 // Event listeners for input 
 GameBoyAdvanceKeypad.prototype.registerHandlers = function() {
+	// TODO: Change these to be react syntax
 
 	// listen for keydown / keyup
 	window.addEventListener("keydown", this.keyboardHandler.bind(this), true);
@@ -244,6 +245,7 @@ GameBoyAdvanceKeypad.prototype.registerHandlers = function() {
 
 
 	for (var i=0; i < this.buttons.length; i++) {
+		// TODO: Change these to be react syntax
 		document.getElementById("button_" + String( this.buttons[i] ) ).addEventListener("touchstart", this.handler.bind(this), true);
 		document.getElementById("button_" + String( this.buttons[i] ) ).addEventListener("touchend", this.handler.bind(this), true);
 
@@ -258,3 +260,5 @@ GameBoyAdvanceKeypad.prototype.registerHandlers = function() {
 		document.getElementById("button_" + String( this.buttons[i] ) ).addEventListener("mouseleave", this.handler.bind(this), true);
 	}
 };
+
+export default GameBoyAdvanceKeypad;

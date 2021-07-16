@@ -1,4 +1,4 @@
-function GameBoyAdvanceIO() {
+export function GameBoyAdvanceIO() {
 	// Video
 	this.DISPCNT = 0x000;
 	this.GREENSWP = 0x002;
@@ -824,3 +824,5 @@ GameBoyAdvanceIO.prototype.invalidatePage = function(address) {};
 GameBoyAdvanceIO.prototype.STUB_REG = function(type, offset) {
 	this.core.STUB('Unimplemented ' + type + ' register write: ' + offset.toString(16));
 };
+
+export default GameBoyAdvanceIO

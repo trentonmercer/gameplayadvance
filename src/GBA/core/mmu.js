@@ -1,4 +1,7 @@
-function MemoryView(memory, offset) {
+import { Serializer } from './util'
+
+
+export function MemoryView(memory, offset) {
 	this.inherit();
 	this.buffer = memory;
 	this.view = new DataView(this.buffer, typeof(offset) === "number" ? offset : 0);
@@ -812,3 +815,5 @@ GameBoyAdvanceMMU.prototype.flushSave = function() {
 GameBoyAdvanceMMU.prototype.allocGPIO = function(rom) {
 	return new GameBoyAdvanceGPIO(this.core, rom);
 };
+
+export default GameBoyAdvanceMMU

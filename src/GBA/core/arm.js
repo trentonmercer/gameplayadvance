@@ -1,4 +1,4 @@
-ARMCoreArm = function (cpu) {
+export const ARMCoreArm = function (cpu) {
 	this.cpu = cpu;
 
 	this.addressingMode23Immediate = [
@@ -1567,3 +1567,6 @@ ARMCoreArm.prototype.constructUMULLS = function(rd, rn, rs, rm, condOp) {
 		cpu.cpsrZ = !((gprs[rd] & 0xFFFFFFFF) || (gprs[rn] & 0xFFFFFFFF));
 	};
 };
+
+
+export default ARMCoreArm

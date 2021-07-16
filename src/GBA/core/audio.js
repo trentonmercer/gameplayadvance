@@ -1,4 +1,4 @@
-function GameBoyAdvanceAudio(audio_option) {
+export function GameBoyAdvanceAudio(audio_option) {
     if (audio_option == true) {
         window.AudioContext = window.AudioContext || window.webkitAudioContext;
     	if (window.AudioContext) {
@@ -748,3 +748,5 @@ GameBoyAdvanceAudio.prototype.audioProcess = function(audioProcessingEvent) {
 		}
 	}
 };
+
+export default GameBoyAdvanceAudio;

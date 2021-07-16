@@ -1,4 +1,4 @@
-function GameBoyAdvanceSIO() {
+export function GameBoyAdvanceSIO() {
 	this.SIO_NORMAL_8 = 0;
 	this.SIO_NORMAL_32 = 1;
 	this.SIO_MULTI = 2;
@@ -127,3 +127,5 @@ GameBoyAdvanceSIO.prototype.read = function(slot) {
 	}
 	return 0;
 };
+
+export default GameBoyAdvanceSIO
