@@ -1,15 +1,10 @@
 import React from 'react'
 
-/* Import styles */
-import '../../lib/gameplayadvance/css/gba.css'
-import '../../lib/gameplayadvance/css/main.css'
-import '../../lib/gameplayadvance/css/bootstrap.min.css'
-
 /* GBA components */
-import Screen from './GBA/Screen'
-import RoundButton from './GBA/RoundButton'
-import PillButton from './GBA/PillButton'
-import MoveButton from './GBA/MoveButton'
+import Screen from './Screen'
+import RoundButton from './RoundButton'
+import PillButton from './PillButton'
+import MoveButton from './MoveButton'
 
 /* Emulator
 

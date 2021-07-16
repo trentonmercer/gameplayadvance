@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -5,10 +6,10 @@ import {
   Route,
 } from "react-router-dom";
 
-import Game from  "./screens/Game"
-import Library from "./screens/Library"
+import Game from  "../screens/Game"
+import Library from "../screens/Library"
 
-const App = () => {
+export const Routes = () => {
   return (
     <Router>
     <Switch>
@@ -23,4 +24,5 @@ const App = () => {
   );
 }
 
-export default App;
+export default Routes;
+

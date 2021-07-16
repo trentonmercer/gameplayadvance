@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-import EmulatorContainer from "../components/containers/EmulatorContainer"
+import GBA from "../GBA";
 
 const Game = () => {
     const history = useHistory();
@@ -9,7 +9,7 @@ const Game = () => {
     return (
         <div>
             <button onClick={() => {history.push('/') } }>Library</button>
-            <EmulatorContainer />
+            <GBA />
         </div>
     );
 }

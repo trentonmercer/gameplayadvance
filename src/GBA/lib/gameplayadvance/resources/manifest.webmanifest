@@ -1,0 +1,16 @@
+{
+"background_color": "purple",
+"description": "Play Game Boy Advanced Games",
+"display": "fullscreen",
+"icons": [
+  {
+    "src": "../images/icon-large.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }
+],
+"name": "GamePlayAdvanced",
+"short_name": "GBA",
+"start_url": "/gameplayadvanced/index.html"
+}
+ 
