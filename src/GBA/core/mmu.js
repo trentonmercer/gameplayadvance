@@ -1,7 +1,8 @@
 import { Serializer } from './util'
+import { SRAMSavedata, FlashSavedata, EEPROMSavedata } from './savedata'
+import { GameBoyAdvanceGPIO } from './gpio'
 
-
-export function MemoryView(memory, offset) {
+function MemoryView(memory, offset) {
 	this.inherit();
 	this.buffer = memory;
 	this.view = new DataView(this.buffer, typeof(offset) === "number" ? offset : 0);
@@ -816,4 +817,4 @@ GameBoyAdvanceMMU.prototype.allocGPIO = function(rom) {
 	return new GameBoyAdvanceGPIO(this.core, rom);
 };
 
-export default GameBoyAdvanceMMU
+export { MemoryBlock, MemoryView, GameBoyAdvanceMMU }

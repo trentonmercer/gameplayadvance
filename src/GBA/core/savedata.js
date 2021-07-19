@@ -1,4 +1,7 @@
-export function SRAMSavedata(size) {
+import { MemoryView } from './mmu'
+
+
+function SRAMSavedata(size) {
 	MemoryView.call(this, new ArrayBuffer(size), 0);
 
 	this.writePending = false;
@@ -306,4 +309,5 @@ EEPROMSavedata.prototype.replaceData = function(memory) {
 	MemoryView.prototype.replaceData.call(this, memory, 0);
 };
 
-export default SRAMSavedata
+
+export { EEPROMSavedata, SRAMSavedata, FlashSavedata }

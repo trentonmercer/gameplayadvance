@@ -1,5 +1,5 @@
 import ARMCore from './core';
-import GameBoyAdvanceMMU from './mmu';
+import { GameBoyAdvanceMMU } from './mmu';
 import GameBoyAdvanceInterruptHandler from './irq';
 import GameBoyAdvanceIO from './io';
 import GameBoyAdvanceAudio from './audio';

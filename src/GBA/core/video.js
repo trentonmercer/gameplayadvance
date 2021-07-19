@@ -1,3 +1,5 @@
+import GameBoyAdvanceSoftwareRenderer from './video/software'
+
 export function GameBoyAdvanceVideo() {
 	this.renderPath = new GameBoyAdvanceSoftwareRenderer();
 

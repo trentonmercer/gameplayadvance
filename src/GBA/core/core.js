@@ -1,4 +1,5 @@
 import ARMCoreArm from './arm'
+import ARMCoreThumb from './thumb';
 
 export function ARMCore() {
 	this.inherit();
